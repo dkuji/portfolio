@@ -1,5 +1,5 @@
 <template>
-  <h1>Carrer</h1>
+  <h1>skill</h1>
 </template>
 
 <script>

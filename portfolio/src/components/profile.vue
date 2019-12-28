@@ -1,5 +1,5 @@
 <template>
-  <h1>link</h1>
+  <h1>profile</h1>
 </template>
 
 <script>
