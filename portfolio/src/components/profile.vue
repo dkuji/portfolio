@@ -4,7 +4,8 @@
       <v-card title="title" class="mx-auto">
         <v-card-title>Profile</v-card-title>
         <v-card-text>
-          <p>Infrastructure developer.</p>
+          <p>Hi, I'm dkuji. Infrastructure developer.</p>
+          <p>Since starting his journey as a developer in 2011, he has been building infrastructure on many projects with System Integrator and building and operating cloud-native infrastructure with Edtech Startup.</p>
         </v-card-text>
         <v-simple-table>
           <thead>
