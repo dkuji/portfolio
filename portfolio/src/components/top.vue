@@ -7,7 +7,7 @@
       <p class="display-1">dkuji</p>
 
       <p>Hi, I'm dkuji. I'm Infrastructure developer.</p>
-      <p>Since starting his journey as a developer in 2011, he has been building infrastructure on many projects with System Integrator and building and operating cloud-native infrastructure with Edtech Startup.</p>
+      <p>Since I started my journey as a developer in 2011, I have built infrastructure for many projects with System Integrator. And Edtech Startup builds and operates a cloud-native infrastructure.</p>
     </v-container>
   </div>
 </template>

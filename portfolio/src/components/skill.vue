@@ -137,11 +137,11 @@ export default {
             },
             {
               tech: "django",
-              notes: "studying"
+              notes: ""
             },
             {
               tech: "Ruby On Rails",
-              notes: "A little"
+              notes: ""
             }
           ]
         }

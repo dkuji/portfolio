@@ -4,7 +4,7 @@
       <v-card title="title" class="mx-auto">
         <v-card-title>Link</v-card-title>
         <v-card-text>
-          <p>link</p>
+          <p></p>
         </v-card-text>
         <v-simple-table>
           <thead>
