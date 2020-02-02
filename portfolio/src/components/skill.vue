@@ -1,57 +1,30 @@
 <template>
   <div>
-    <v-container>
-      <v-layout row wrap>
-        <v-flex xs12 sm6 md6 v-for="item in infra" :key="item.title">
-          <v-card class="ma-3">
-            <v-card-title>{{ item.title }}</v-card-title>
-            <v-card-text>
-              <p>{{ item.text }}</p>
-            </v-card-text>
-            <v-simple-table>
-              <thead>
-                <tr>
-                  <th class="text-left">Technology</th>
-                  <th class="text-left">notes</th>
-                </tr>
-              </thead>
-              <tbody v-for="item2 in item.carrers" :key="item2.tech">
-                <tr>
-                  <td>{{ item2.tech }}</td>
-                  <td>{{ item2.notes }}</td>
-                </tr>
-              </tbody>
-            </v-simple-table>
-          </v-card>
-          <v-spacer></v-spacer>
-        </v-flex>
-
-        <!--
-        <v-flex xs12 md6>
-          <v-card title="title" class="mx-auto">
-            <v-card-title>Infrastructure</v-card-title>
-            <v-card-text>
-              <p>Infrastructure developer.</p>
-            </v-card-text>
-            <v-simple-table>
-              <thead>
-                <tr>
-                  <th class="text-left">Technology</th>
-                  <th class="text-left">Years</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="item in carrers" :key="item.tech">
-                  <td>{{ item.tech }}</td>
-                  <td>{{ item.year }}</td>
-                </tr>
-              </tbody>
-            </v-simple-table>
-          </v-card>
-        </v-flex>
-        -->
-      </v-layout>
-    </v-container>
+    <v-layout row wrap>
+      <v-flex xs12 sm6 md6 v-for="item in infra" :key="item.title">
+        <v-card class="ma-3">
+          <v-card-title>{{ item.title }}</v-card-title>
+          <v-card-text>
+            <p>{{ item.text }}</p>
+          </v-card-text>
+          <v-simple-table>
+            <thead>
+              <tr>
+                <th class="text-left">Technology</th>
+                <th class="text-left">notes</th>
+              </tr>
+            </thead>
+            <tbody v-for="item2 in item.carrers" :key="item2.tech">
+              <tr>
+                <td>{{ item2.tech }}</td>
+                <td>{{ item2.notes }}</td>
+              </tr>
+            </tbody>
+          </v-simple-table>
+        </v-card>
+        <v-spacer></v-spacer>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 

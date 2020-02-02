@@ -1,32 +1,30 @@
 <template>
   <div>
-    <v-container>
-      <v-card title="title" class="mx-auto">
-        <v-card-title>Link</v-card-title>
-        <v-card-text>
-          <p></p>
-        </v-card-text>
-        <v-simple-table>
-          <thead>
-            <tr>
-              <th class="text-left">Name</th>
-              <th class="text-left">Url</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in links" :key="item.name">
-              <td>
-                <v-icon>{{ item.icon }}</v-icon>
-                {{ item.name }}
-              </td>
-              <td>
-                <a :href="item.link">{{ item.link }}</a>
-              </td>
-            </tr>
-          </tbody>
-        </v-simple-table>
-      </v-card>
-    </v-container>
+    <v-card title="title" class="mx-auto">
+      <v-card-title>Link</v-card-title>
+      <v-card-text>
+        <p></p>
+      </v-card-text>
+      <v-simple-table>
+        <thead>
+          <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Url</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in links" :key="item.name">
+            <td>
+              <v-icon>{{ item.icon }}</v-icon>
+              {{ item.name }}
+            </td>
+            <td>
+              <a :href="item.link">{{ item.link }}</a>
+            </td>
+          </tr>
+        </tbody>
+      </v-simple-table>
+    </v-card>
   </div>
 </template>
 

@@ -1,37 +1,35 @@
 <template>
   <v-app>
-    <v-app-bar color="green" dark app>
-      <v-toolbar-title>Portfolio</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <!--
-      <v-toolbar-items>
-        <v-btn text to="/">
-          <v-icon>mdi-door</v-icon>Top
-        </v-btn>
-        <v-btn text to="/profile">
-          <v-icon>mdi-account</v-icon>Profile
-        </v-btn>
-        <v-btn text to="/skill">
-          <v-icon>mdi-wrench</v-icon>Skill
-        </v-btn>
-        <v-btn text to="/link">
-          <v-icon>mdi-link-variant</v-icon>Link
-        </v-btn>
-      </v-toolbar-items>
-      -->
-      <v-toolbar-items v-for="item in menus" :key="item.name">
-        <v-btn text :to="item.path">
-          <v-icon>{{ item.icon }}</v-icon>
-          {{ item.name }}
-        </v-btn>
-      </v-toolbar-items>
-    </v-app-bar>
-    <v-content>
-      <router-view />
-    </v-content>
-    <v-footer color="green" dark app>
-      <v-toolbar-title>Portfolio</v-toolbar-title>
-    </v-footer>
+    <v-container>
+      <v-app-bar dark app>
+        <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-toolbar-title>{{ title }}</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-xs-only">
+          <v-btn text v-for="item in menus" :key="item.name" :to="item.path">
+            <v-icon>{{ item.icon }}</v-icon>
+            {{ item.name }}
+          </v-btn>
+        </v-toolbar-items>
+      </v-app-bar>
+
+      <v-content>
+        <router-view />
+      </v-content>
+      <v-footer dark app>
+        <v-toolbar-title>Portfolio</v-toolbar-title>
+      </v-footer>
+    </v-container>
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list nav dense>
+        <v-list-item v-for="item in menus" :key="item.name">
+          <v-btn text :to="item.path">
+            <v-icon>{{ item.icon }}</v-icon>
+            <v-list-item-title>{{ item.name }}</v-list-item-title>
+          </v-btn>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
   </v-app>
 </template>
 
@@ -61,8 +59,13 @@ export default {
           path: "/link",
           icon: "mdi-link-variant"
         }
-      ]
+      ],
+      title: "Portfolio",
+      toggle_exclusive: undefined
     };
+  },
+  mounted() {
+    //console.log(this.$vuetify.breakpoint);
   }
 };
 </script>
